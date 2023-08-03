@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <base href="<?php echo $base ?>">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Metodo Italiano 2022</title>
+        <link rel="shortcut icon" href="assets/img/flag.png">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!-- Open Graph -->
+        <?php $seoText = 'Metodo Italiano 2022'; ?>
+        <meta name="description" content="<? echo $seoText; ?>"/>
+        <meta name="keywords" content="<? echo $seoText; ?>"/>
+        <meta property="og:title" content="<? echo $seoText; ?>"/>
+        <meta property="og:description" content="<? echo $seoText; ?>"/>
+        <meta property="og:image" content="<? echo $base; ?>assets/img/og-image.png"/>
+        <meta property="og:image:width" content="450"/>
+        <meta property="og:image:height" content="450"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="<?php echo $base; ?>"/>
+        <link rel="canonical" href="<?php echo $base; ?>"/>
+        <!-- Pixel -->
+        <meta name="pixel_id" content="<?php echo $FacebookPixel; ?>">
+        <?php if($FacebookPixel) : ?>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=<?php echo $FacebookPixel ?>&ev=PageView&noscript=1"/>
+        <?php endif; ?>
+
+        <?php if($TiktokPixel) : ?>
+        <script>
+            !function (w, d, t) {
+                w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+                ttq.load('<?php echo $TiktokPixel; ?>');
+                ttq.page();
+            }(window, document, 'ttq');
+        </script>
+        <?php endif; ?>
+
+        <?php if($GooglePixel) : ?>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $GooglePixel; ?>"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '<?php echo $GooglePixel; ?>');
+            </script>
+        <?php endif; ?>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="ribbon-img-fixed" onclick="scrollToTop()">
+                Funziona <br>
+                ovunque! ✅ 
+            </div>
+            <header class="header">
+                <div class="container flex align-center space-between">
+                    <img src="assets/img/logo.png" alt="logo" class="logo-img">
+                    <div class="header-promo flex align-center">
+                        <img src="assets/img/svg/flag.svg" alt="flag" class="flag-img">
+                        <p>
+                            Offerta esclusiva per gli italiani
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <section class="hero-section">
+                    <div class="container flex space-between">
+                        <div class="video-wrapper">
+                            <div class="video">
+                                <video width="100%" controls controlsList="nodownload" playsinline poster="assets/video/poster.png"></video>
+                                <div class="play-btn"></div>
+                            </div>
+                        </div>
+                        <div class="form-wrapper">
+                            <form action="thankyou.html" class="form" onsubmit="event.preventDefault(); formSubmission()">
+                                <div class="input-wrap">
+                                    <input type="text" class="form-input name" placeholder="Your Name">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" class="form-input lastname" placeholder="Your Lastname">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" class="form-input email" placeholder="Your Email">
+                                </div>
+                                <div class="input-wrap">
+                                    <input type="text" class="form-input phone" placeholder="Your Phone">
+                                </div>
+                                <div class="required-fields">
+                                    Please fill in all the fields
+                                </div>
+                                <div class="input-wrap">
+                                    <button class="btn alert-btn">Get Access Now</button>
+                                </div>
+                            </form>
+                            <img src="assets/img/certs.png" alt="certificates" class="certs-img">
+                        </div>
+                    </div>
+                </section>
+                <nav class="navigation">
+                    <ul class="nav-list flex align-center center">
+                        <li class="nav-list-item" onclick="scrollToAbout()">Chi sono?</li>
+                        <li class="nav-list-item" onclick="scrollToStories()">Storie di Successo</li>
+                        <li class="nav-list-item" onclick="scrollToResults()">Risultati in Tempo Reale</li>
+                        <li class="nav-list-item" onclick="scrollToFAQ()">FAQ</li>
+                    </ul>
+                </nav>
+                <section class="section-about" id="section-about">
+                    <h2 class="section-heading">Chi sono?</h2>
+                    <div class="container">
+                        <div class="about-content flex space-between">
+                            <div class="about-content-img-wrapper">
+                                <img src="assets/img/arnaldo.png" alt="arnaldo" class="about-img">
+                            </div>
+                            <div class="about-content-text-wrapper">
+                                <h2>Ciao, sono Arnaldo Corsini 👋</h2>
+                                <p>
+                                    Non mi sono laureato e non sono un matematico,
+                                    <br><br>
+                                    ma ho appena trovato un modo per guadagnare milioni di euro sui mercati di opzioni binarie, e volevo aiutare i miei genitori e la mia famiglia a guadagnare altrettanto!
+                                </p>
+                                <h4>Perché il metodo italiano?</h4>
+                                <p>
+                                    È così  facile da usare; chiunque, anche senza nessuna esperienza, può iniziare a guadagnare in mezz'ora! Ora е́ il momento giusto!
+                                </p>
+                                <div class="signature-wrapper flex align-center space-between">
+                                    <img src="assets/img/signature.png" alt="signature" class="signature-img">
+                                    <img src="assets/img/profit-cert.png" alt="profit-cert" class="profit-cert-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-stories">
+                    <h2 class="section-heading">Storied Di Successo</h2>
+                    <div class="container">
+                        <img src="assets/img/chat.png" alt="chat-stories" class="stories-img">
+                    </div>
+                </section>
+
+                <section class="comment section-social" id="comment">
+                    <div class="container">
+                        <h2 class="section-heading">
+                            AGGIORNAMENTO IN TEMPO REALE MINUTO PER MINUTO DEI FEED SU TWITTER E FACEBOOK
+                        </h2>
+                    </div>
+                    <div class="container flex center align-center">
+                        <div class="comment__item">
+                            <div class="comment__title-img">
+                                <img src="assets/img/svg/comment-facebook.svg" alt="facebook" />
+                            </div>
+                            <div class="comment__scroll">
+                                <div class="comment__scroll-wrap">
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user1.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Laura</h4>
+                                                    <p class="comment-text">
+                                                        Grazie Servizio di Assistenza per aver risolto il mio piccolo problema, non vedo l'ora di fare un sacco di soldi grazie al Metodo Italiano
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 2m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user-f2.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Vincenzo</h4>
+                                                    <p class="comment-text">
+                                                        Quanto tempo deve passare prima che il denaro passi dal conto del mio broker al mio conto? Il Metodo Italiano Ho appena ritirato una somma a 5 cifre... impressionante!
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 4m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user-f3.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Federico</h4>
+                                                    <p class="comment-text">
+                                                        cosa sta succedendo?? Il mio conto ora ha raggiunto 23.891,44€, ma ho depositato appena 300€ quattro giorni fa, questo è folle
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 6m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user-f4.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Carlo</h4>
+                                                    <p class="comment-text">
+                                                        Grazie Grazie Grazie
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 7m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment__item">
+                            <div class="comment__title-img">
+                                <img src="assets/img/svg/comment-twitter.svg" alt="twitter" />
+                            </div>
+                            <div class="comment__scroll">
+                                <div class="comment__scroll-wrap">
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user4.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Luca</h4>
+                                                    <p class="comment-text">
+                                                        Sto festeggiando l'ennesima giornata di guadagni grazie a @metodoitaliano non ho ancora avuto una giornata storta
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 2m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/svg/user3.svg" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Monica</h4>
+                                                    <p class="comment-text">
+                                                        Appena fatto 868,44€ in un unico trade @metodoitaliano
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 4m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user-t3.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Ricardo</h4>
+                                                    <p class="comment-text">
+                                                        Roba tosta, siete una bomba @metodoitaliano Oggi con il primo scambio ho appena guadagnato 389.11€ #piuprofitti #metodoitaliano
+                                                    </p>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 4m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comment__scroll-item">
+                                        <div class="comment__scroll-item-wrap">
+                                            <img src="assets/img/user-t4.png" alt="user" />
+                                            <div>
+                                                <div class="comment__scroll-text-wrap">
+                                                    <h4 class="comment-name">Antonella</h4>
+                                                    <span class="comment-text">
+                                                        Grazie Grazie Grazie @metodoitaliano
+                                                    </span>
+                                                </div>
+                                                <div class="comment-desc">
+                                                    <span> 4m </span>
+                                                    <span class="comment-desc-bold">
+                                                        Mi Piace
+                                                    </span>
+                                                    <span class="comment-desc-bold">
+                                                        Commenta
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="result section-results" id="result">
+                    <h2 class="section-heading">Risultati Di Terze Persone Verificati In Tempo Reale!</h2>
+                    <div class="result-title result-scroll">
+                        <div class="container result-wrap">
+                            <span class="result-1"> IL METODO ITALIANO </span>
+                            <span class="result-2"> Profitto </span>
+                            <span class="result-3"> Data di negoziazione </span>
+                            <span class="result-4"> Profitto % </span>
+                            <span class="result-5"> Risultati </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll result-grey">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg1 " style="
+                                visibility: visible;
+                                -webkit-animation-delay: 0.1s;
+                                -moz-animation-delay: 0.1s;
+                                animation-delay: 0.1s;
+                                " />
+                            <span class="result-bold username1 ">
+                            </span><span class="result-norm city1 "></span>
+                            </span>
+                            <span class="result-2 result-number amt1 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent1 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg2 " />
+                            <span class="result-bold username2 ">
+                            </span>
+                            <span class="result-norm city2 "></span>
+                            </span>
+                            <span class="result-2 result-number amt2 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent2 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll result-grey">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg3 " />
+                            <span class="result-bold username3 ">
+                            </span>
+                            <span class="result-norm city3 "></span>
+                            </span>
+                            <span class="result-2 result-number amt3 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent3 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg4 " />
+                            <span class="result-bold username4 ">
+                            </span>
+                            <span class="result-norm city4 "></span>
+                            </span>
+                            <span class="result-2 result-number amt4 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent4 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll result-grey">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg5 " />
+                            <span class="result-bold username5 ">
+                            </span>
+                            <span class="result-norm city5 "></span>
+                            </span>
+                            <span class="result-2 result-number amt5 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent5 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg6 " />
+                            <span class="result-bold username6 ">
+                            </span>
+                            <span class="result-norm city6 "></span>
+                            </span>
+                            <span class="result-2 result-number amt6 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent6 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll result-grey">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg7 " />
+                            <span class="result-bold username7 ">
+                            </span>
+                            <span class="result-norm city7 "></span>
+                            </span>
+                            <span class="result-2 result-number amt7 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent7 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg8 " />
+                            <span class="result-bold username8 ">
+                            </span>
+                            <span class="result-norm city8 "></span>
+                            </span>
+                            <span class="result-2 result-number amt8 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent8 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="result-line result-scroll result-grey">
+                        <div class="container result-wrap">
+                            <span class="result-1">
+                            <img src="" alt="" class="userid pimg pimg9 " />
+                            <span class="result-bold username9 ">
+                            </span>
+                            <span class="result-norm city9 "></span>
+                            </span>
+                            <span class="result-2 result-number amt9 ">
+                            </span>
+                            <span class="result-3 today ">
+                            </span>
+                            <span class="result-4 result-number percent9 ">
+                            </span>
+                            <span class="result-5">
+                            <img src="assets/img/check.png" alt="success" class="" />
+                            </span>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-faq">
+                    <div class="container">
+                        <h2 class="section-heading">
+                            faq
+                        </h2>
+                        <div class="faq-content">
+                            <div class="faq-item">
+                                <button class="faq-question">Cos'è il Metodo Italiano?</button>
+                                <div class="faq-answer">
+                                    <p>Il Metodo Italiano è un sofware TOTALMENTE GRATUITO che ti permette di effettuare operazioni sui mercati delle CFDs con un solo clic! E' completamente automatizzato ed effettua scambi vincenti al posto tuo!</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Quanti soldi posso guadagnare con questo software?</button>
+                                <div class="faq-answer">
+                                    <p>Per dirla in breve, non ci sono limiti. Detto più tecnicamente, in realtà dipende dal denaro presente sul tuo conto. La maggior parte dei nostri membri effettua un versamento di 300€, guadagnando circa 800€-1000€ al giorno. Coloro che depositano sul proprio conto almeno 1.000€, possono guadagnare oltre 2500€ al giorno!</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Quanto può durare ciascuna operazione?</button>
+                                <div class="faq-answer">
+                                    <p>Da un minuto a un'ora. Così potrai vedere crescere i tuoi profitti subito, senza dover più aspettare lunghi periodi di tempo.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Devo usare la mia carta di credito al momento della registrazione?</button>
+                                <div class="faq-answer">
+                                    <p><strong>ASSOLUTAMENTE NO.</strong> Il Metodo Italiano è TOTALMENTE GRATUITO. Per scaricare il sistema Metodo Italiano NON ti verrà chiesta la carta di credito, nè il conto paypal nè le coordinate bancarie!
+                                        <br><br>
+                                        Una volta effettuato l'accesso all'area membri, ti consiglieremo un broker di CFDs del quale servirti. A questo punto, dovrai effettuare un versamento per poi iniziare a guadagnare. Si tratta del TUO denaro destinato esclusivamente al trading, e potrà essere prelevato in qualsiasi momento!
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Il software è compatibile con i computer Mac?</button>
+                                <div class="faq-answer">
+                                    <p>Sì! Si tratta di un'applicazione web based che può essere utilizzata su tutti i sistemi Windows, Mac o Linux! Hai solo bisogno di un browser.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Non ho molto tempo libero a disposizione - Il Metodo Italiano funziona davvero in maniera automatica?</button>
+                                <div class="faq-answer">
+                                    <p>Sì! Basta avviare il software e farà trading al posto tuo! Puoi tranquillamente allontanarti dalla postazione, e goderti i profitti ! Non è necessario che tu stia vicino al software affichè lui lavori per te e ti permetta di guadagnare migliaia di euro al giorno!</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">E' facile utilizzare il software?</button>
+                                <div class="faq-answer">
+                                    <p>MOLTO FACILE! Una volta effettuata la registrazione nell'area membri compilando un semplice modulo, il software si aprirà davanti a te, fai clic su avvio, e vai con i profitti! Non c'è bisogno di nessuna complicata installazione!</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">Cosa mi dici del Servizio di Assistenza?</button>
+                                <div class="faq-answer">
+                                    <p>Il nostro team di assistenza clienti è a tua disposizione 7 giorni alla settimana - 24 ore al giorno. <strong>Offriamo assistenza via email ma, cosa ancora più importante, all'interno dell'area membri abbiamo un sistema di chat con i nostri operatori pronti ad aiutarti in QUALSIASI momento! Alle 2:00 del mattino? NON C'E' PROBLEMA!</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <p class="footer-copyright" onclick="scrollToTop()">
+                        Metodo Italiano Copyright <span class="current-year"></span>. Tutti i diritti sono riservati.
+                    </p>
+                    <p class="footer-text">
+                        Risk disclosure:
+                        <br><br>
+                        <span class="current-location"></span> denies any responsibility for loss or damage resulting of reliance on the information contained in this website, included data, quotes, charts, videos or signals. Please be aware that trading in financial instruments may result in the loss of the whole capital invested. Past performance does not guarantee future results. Cryptocurrency trading, and fiat currency trading on margins involves high risk, and is not suitable for all investors. Earnings and income representations made by "This Website" only used as aspirational examples of your earnings potential. The success of those in the testimonials and other examples are exceptional results and therefore are not intended as a guarantee that you or others will achieve the same results. Individual results will vary and are entirely dependent on you.
+                        <br><br>
+                        The Domain Operator may be compensated by the advertisers that appear on the website, based on your interaction with the advertisements or advertisers.
+                        <br><br>
+                        For further details please make sure to read our <a href="javascript:void(0)" class="alterlink">Terms & Conditions</a>, <a href="javascript:void(0)" class="alterlink">Privacy Policy</a> and <a href="javascript:void(0)" class="alterlink">Cookies Policy</a>.
+                        <br><br>
+                        *Testimonials:
+                        <br><br>
+                        All characters, information and events depicted on This Website are entirely fictitious. Any similarity to actual events or persons, living or dead, is purely coincidental.
+                    </p>
+                    <p class="footer-links">
+                        <a href="javascript:void(0)" class="alterlink">Termini di utilizzo</a>
+                        <a href="javascript:void(0)" class="alterlink">Politica sulla riservatezza</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
